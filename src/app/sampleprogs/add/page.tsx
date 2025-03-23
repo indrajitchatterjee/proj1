@@ -1,5 +1,5 @@
 'use client'
-import {useState} from "react";
+import {SetStateAction, useState} from "react";
 
 export default function Page() {
     const [val1, setVal1] = useState('');
@@ -7,18 +7,18 @@ export default function Page() {
     const [msg, setMsg] = useState('');
 
     function handleClick() {
-        const v1=parseInt(val1);
-        const v2=parseInt(val2);
-        const val3=v1+v2;
+        const v1 = parseInt(val1);
+        const v2 = parseInt(val2);
+        const val3 = v1 + v2;
         setMsg('You have entered: '.concat(String(val3)));
     }
 
-    function handelVal1Change(e) {
+    function handelVal1Change(e: { target: { value: SetStateAction<string>; }; }) {
         setVal1(e.target.value);
         setMsg('');
     }
 
-    function handelVal2Change(e) {
+    function handelVal2Change(e: { target: { value: SetStateAction<string>; }; }) {
         setVal2(e.target.value);
         setMsg('');
     }

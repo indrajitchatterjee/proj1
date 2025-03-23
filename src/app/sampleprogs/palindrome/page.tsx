@@ -1,16 +1,16 @@
 'use client'
-import {useState} from "react";
+import {SetStateAction, useState} from "react";
 
-export default function Factorial(){
-    const [val, setVal] =useState('');
-    const [result, setResult]=useState('');
+export default function Factorial() {
+    const [val, setVal] = useState('');
+    const [result, setResult] = useState('');
 
-    function handelReset(){
+    function handelReset() {
         setResult('');
         setVal('');
     }
 
-    function handelInput(e){
+    function handelInput(e: { target: { value: SetStateAction<string>; }; }){
         setVal(e.target.value);
     }
 

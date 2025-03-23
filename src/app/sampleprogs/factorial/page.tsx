@@ -1,12 +1,13 @@
 'use client'
-import {useState} from "react";
+import {SetStateAction, useState} from "react";
 
 import '@/app/globals.css';
-export default function Page(){
-    const [val, setVal]=useState('');
-    const [result, setResult]=useState('');
 
-    function handelInput(e){
+export default function Page() {
+    const [val, setVal] = useState('');
+    const [result, setResult] = useState('');
+
+    function handelInput(e: { target: { value: SetStateAction<string>; }; }){
         setVal(e.target.value);
 
     }
