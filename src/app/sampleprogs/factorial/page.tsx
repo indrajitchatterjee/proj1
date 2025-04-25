@@ -9,7 +9,6 @@ export default function Page() {
 
     function handelInput(e: { target: { value: SetStateAction<string>; }; }){
         setVal(e.target.value);
-
     }
     function handelReset(){
         setVal('');

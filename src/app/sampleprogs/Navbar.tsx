@@ -8,6 +8,7 @@ export default function Navbar(){
             <Link href={'/sampleprogs/add'}>Add Two Numbers</Link> |
             <Link href={'/sampleprogs/factorial'}>Factorial</Link> |
             <Link href={'/sampleprogs/palindrome'}>Palindrome</Link> |
+            <Link href={'/sampleprogs/prime'}>Prime</Link> |
         </div>
 
     );
